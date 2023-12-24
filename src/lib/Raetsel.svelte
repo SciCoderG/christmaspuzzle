@@ -28,7 +28,7 @@
 	<div class="hero-overlay bg-opacity-60" />
 	<div class="hero-content text-center text-white	">
 		<div class="max-w-md">
-			<h1 class="mb-5 text-5xl font-bold">Ein wildes Weihnachtsrätsel erscheint!</h1>
+			<h1 class="mb-5 text-5xl font-bold break-word" lang="de">Ein wildes Weihnachtsrätsel erscheint!</h1>
 			<p class="mb-5" />
 			<div class="mb-5">
 				<div class="gedicht">
@@ -65,6 +65,11 @@
 	.gedicht {
 		white-space: pre-line;
 	}
+
+    .break-word {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 
     .richtig {
         color: green;
