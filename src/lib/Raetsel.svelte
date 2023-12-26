@@ -28,7 +28,7 @@
 	<div class="hero-overlay bg-opacity-60" />
 	<div class="hero-content text-center text-white	">
 		<div class="max-w-md">
-			<h1 class="mb-5 text-5xl font-bold break-word" lang="de">Ein wildes Weihnachtsrätsel erscheint!</h1>
+			<h1 class="mb-5 text-5xl font-bold break-word" lang="de">Welch rätselhafte Weihnachtslieder</h1>
 			<p class="mb-5" />
 			<div class="mb-5">
 				<div class="gedicht">
@@ -40,23 +40,24 @@
 				</div>
 			</div>
 
-			<div class="p-4 text-center">
-                <input type="text" 
+			<form class="p-4 text-center" on:submit|preventDefault={check}>
+                
+                <input type="tel" 
                        id="numberInput" 
                        bind:value={number}
                        class="input input-bordered w-full max-w-xs text-center" 
                        maxlength="4" 
-                       pattern="\d{4}" 
                        title="Vier Zahlen eingeben" 
+                       placeholder="Vier Zahlen werden gesucht"
                        on:input={reset} />
-            
-                <button class="btn btn-primary mt-2" on:click={check}>
+                
+                <button class="btn btn-primary mt-2" type="submit">
                     Überprüfen
                 </button>
                 <p class="mt-2" class:richtig={isCorrect} class:falsch={!isCorrect}>
                     {feedback}
                 </p>
-            </div>
+            </form>
 		</div>
 	</div>
 </div>
